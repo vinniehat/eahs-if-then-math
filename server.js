@@ -10,14 +10,12 @@ const PORT = 5000;
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join('./build')));
+app.use(express.static(path.join(__dirname + './build')));
 
 // Express Setup
 app.get('*', function(req, res) {
-	res.sendFile(path.resolve('./build/index.html'));
+	res.sendFile(path.resolve(__dirname + './build/index.html'));
 });
-
-console.log(path.resolve("./build/index.html"))
 
 app.listen(PORT, function (err) {
 	if (err) return console.log(err);
