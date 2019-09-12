@@ -47,6 +47,7 @@ form {
 
 .response {
     color: rgb(255, 68, 68);
+
 }
 
 input[placeholder] {
@@ -55,4 +56,9 @@ input[placeholder] {
 }
 input:focus, textarea:focus, select:focus{
     outline: none;
+}
+
+p {
+    font-size: 25px;
+    letter-spacing: 1px;
 }
